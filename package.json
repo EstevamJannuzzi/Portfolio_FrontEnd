@@ -6,7 +6,8 @@
   "homepage": "https://estevamjannuzzi.github.io/Portfolio_3D_Designer/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-index-to-404.js",
+    "predeploy": "npm run build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },

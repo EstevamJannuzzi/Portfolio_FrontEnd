@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../Pages/home.jsx'
 import Videos from '../Pages/videos.jsx'
 import Imagens from '../Pages/imagens.jsx'
@@ -11,7 +11,7 @@ import Contatos from '../Pages/contatos.jsx'
 
 const AppRoutes = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/videos" element={<Videos />} />
