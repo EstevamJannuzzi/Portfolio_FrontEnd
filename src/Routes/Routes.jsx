@@ -8,6 +8,7 @@ import Canais from '../Pages/canais.jsx'
 import Programacao from '../Pages/programacao.jsx'
 import Curriculo from '../Pages/curriculo.jsx'
 import Contatos from '../Pages/contatos.jsx'
+import NotFound from '../Pages/404.jsx'
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path="/programacao" element={<Programacao />} />
         <Route path="/curriculo" element={<Curriculo />} />
         <Route path="/contatos" element={<Contatos />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   )
