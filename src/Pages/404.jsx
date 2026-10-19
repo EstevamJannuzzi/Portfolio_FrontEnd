@@ -21,11 +21,11 @@ const NotFound = () => {
                     />
                 </div>
             </div>
-            <div className="fixed bottom-[90px] left-0 flex w-full justify-center sm:bottom-[44px] lg:bottom-[54px] xl:bottom-[44px]">
+            <div className="mt-8 flex w-full justify-center">
                 <Pictures
-                    src={`${base}/pics/Gremlin1080_Final.webp`}
+                    src={`${base}/pics/latarefrigerante.webp`}
                     alt="Gremlin"
-                    width='w-[150px] sm:w-[210px] lg:w-[220px] xl:w-[390px]'
+                    width='w-[160px] sm:w-[140px] lg:w-[200px] xl:w-[190px]'
                     margin='m-0'
                     special='block fill-white drop-shadow-xl/50'
                 />
