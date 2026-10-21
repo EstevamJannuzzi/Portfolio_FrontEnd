@@ -8,7 +8,7 @@ import Canais from '../Pages/canais.jsx'
 import Programacao from '../Pages/programacao.jsx'
 import Curriculo from '../Pages/curriculo.jsx'
 import Contatos from '../Pages/contatos.jsx'
-import NotFound from '../Pages/404.jsx'
+import NotFound from '../Pages/notfound.jsx'
 import { BASE_URL } from '../utils/paths.js'
 
 const AppRoutes = () => {

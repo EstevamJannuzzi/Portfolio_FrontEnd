@@ -24,7 +24,7 @@ const NotFound = () => {
                 <Pictures
                     src={assetUrl('pics/latarefrigerante.webp')}
                     alt="Gremlin"
-                    width='w-[160px] sm:w-[140px] lg:w-[200px] xl:w-[190px]'
+                    width='w-[140px]'
                     margin='m-0'
                     special='block fill-white drop-shadow-xl/50'
                 />
