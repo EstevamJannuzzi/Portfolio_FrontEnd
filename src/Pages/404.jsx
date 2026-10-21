@@ -2,10 +2,9 @@ import React from "react";
 import DefaultScreen from '../assets/Components/DefaultScreen.jsx'
 import Pictures from '../assets/Components/Pictures.jsx'
 import Title from '../assets/Components/Title.jsx'
+import { assetUrl } from '../utils/paths.js'
 
 const NotFound = () => {
-    const base = "/Portfolio_3D_Designer"
-
     return (
         <DefaultScreen className='z-30'>
             <div className="w-full overflow-x-clip">
@@ -23,7 +22,7 @@ const NotFound = () => {
             </div>
             <div className="mt-8 flex w-full justify-center">
                 <Pictures
-                    src={`${base}/pics/latarefrigerante.webp`}
+                    src={assetUrl('pics/latarefrigerante.webp')}
                     alt="Gremlin"
                     width='w-[160px] sm:w-[140px] lg:w-[200px] xl:w-[190px]'
                     margin='m-0'

@@ -1,26 +1,26 @@
-const base = "/Portfolio_3D_Designer"
+import { assetUrl } from '../../utils/paths.js'
 
 const programacaos = [
   {
     id: 1,
-    src: `${base}/pics/tictactoe.webp`,
+    src: assetUrl('pics/tictactoe.webp'),
     alt: "Jogo da Velha",
     text: "Baixar",
-    link: `${base}/Programs/TicTacToe_v2.exe`,
+    link: assetUrl('Programs/TicTacToe_v2.exe'),
   },
   {
     id: 2,
-    src: `${base}/pics/Apostas.webp`,
+    src: assetUrl('pics/Apostas.webp'),
     alt: "Jogo de Apostas",
     text: "Baixar",
-    link: `${base}/Programs/Apostas_V3.exe`,
+    link: assetUrl('Programs/Apostas_V3.exe'),
   },
   {
     id: 3,
-    src: `${base}/pics/PDFImagesConverter.webp`,
+    src: assetUrl('pics/PDFImagesConverter.webp'),
     alt: "Conversor de Imagens PDF",
     text: "Baixar",
-    link: `${base}/Programs/PDFImagesConverterInstaller.exe`,
+    link: assetUrl('Programs/PDFImagesConverterInstaller.exe'),
   },
 ]
 
