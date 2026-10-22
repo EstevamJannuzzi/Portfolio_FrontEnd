@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Portfolio_3D_Designer/', // 👈 ajuste obrigatório para GitHub Pages
+  base: '/Portfolio_FrontEnd/', // 👈 ajuste obrigatório para GitHub Pages
   plugins: [
     react(),
     tailwindcss()
