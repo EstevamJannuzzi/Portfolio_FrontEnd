@@ -3,7 +3,6 @@ import DefaultScreen from '../assets/Components/DefaultScreen.jsx'
 import Pictures from '../assets/Components/Pictures.jsx'
 import BoxText from '../assets/Components/BoxText.jsx'
 import Title from '../assets/Components/Title.jsx'
-import { assetUrl } from '../utils/paths.js'
 
 const Home = () => {
     return (
@@ -38,7 +37,7 @@ const Home = () => {
                     size="text-[12px] sm:text-[18px]"
                 />
                 <Pictures
-                    src={assetUrl('pics/dingbo.webp')}
+                    src="./pics/dingbo.webp"
                     alt="DingBo"
                     width='w-full max-w-[320px] lg:w-[400px] lg:max-w-none xl:w-[420px]'
                     margin='m-0 lg:ml-0'
@@ -50,7 +49,7 @@ const Home = () => {
             {/* BLOCO 2 */}
             <div className='mx-auto mt-28 mb-12 flex w-full flex-col items-center justify-center gap-6 px-4 lg:mt-22 lg:px-0 lg:flex-row lg:gap-10'>
                 <Pictures
-                    src={assetUrl('pics/carnivor.webp')}
+                    src="./pics/carnivor.webp"
                     alt="Carnivor"
                     width='w-full max-w-[320px] lg:w-[400px] lg:max-w-none xl:w-[480px]'
                     margin='m-0 lg:ml-0'
@@ -98,7 +97,7 @@ const Home = () => {
                     size="text-[12px] sm:text-[18px]"
                 />
                 <Pictures
-                    src={assetUrl('pics/gremlin.webp')}
+                    src="./pics/gremlin.webp"
                     alt="Gremlin"
                     width='w-full max-w-[320px] lg:w-[460px] lg:max-w-none xl:w-[440px]'
                     margin='m-0 lg:ml-0 lg:mt-0'
@@ -110,7 +109,7 @@ const Home = () => {
             {/* BLOCO 4 */}
             <div className='mx-auto mt-30 mb-4 flex w-full flex-col items-center justify-center gap-6 px-4 sm:mt-8 lg:px-0 lg:flex-row lg:gap-10'>
                 <Pictures
-                    src={assetUrl('pics/joystick.webp')}
+                    src="./pics/joystick.webp"
                     alt="Joystick"
                     width='w-full max-w-[320px] lg:w-[420px] lg:max-w-none xl:w-[400px]'
                     margin='m-0 lg:ml-0'
@@ -136,7 +135,7 @@ const Home = () => {
 
                 <div className="flex w-full justify-center mb-[-30px] sm:mb-[-52px] lg:mb-[-42px] xl:mb-[-36px]">
                     <Pictures
-                        src={assetUrl('pics/Gremlin1080_Final.webp')}
+                        src="./pics/Gremlin1080_Final.webp"
                         alt="Gremlin"
                         width='w-[150px] sm:w-[210px] lg:w-[220px] xl:w-[390px]'
                         margin='m-0'

@@ -2,7 +2,6 @@ import React from "react";
 import DefaultScreen from '../assets/Components/DefaultScreen.jsx'
 import Pictures from '../assets/Components/Pictures.jsx'
 import Title from '../assets/Components/Title.jsx'
-import { assetUrl } from '../utils/paths.js'
 
 const NotFound = () => {
     return (
@@ -22,7 +21,7 @@ const NotFound = () => {
             </div>
             <div className="mt-8 flex w-full justify-center">
                 <Pictures
-                    src={assetUrl('pics/latarefrigerante.webp')}
+                    src="./pics/latarefrigerante.webp"
                     alt="Gremlin"
                     width='w-[140px]'
                     margin='m-0'

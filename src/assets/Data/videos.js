@@ -1,6 +1,4 @@
-import { assetUrl } from '../../utils/paths.js'
-
-const videoPath = (filename) => assetUrl(`videos/${filename}`)
+const videoPath = (filename) => `./videos/${filename}`
 
 const videos = [
   { src: videoPath("Demoreel.mp4") }
