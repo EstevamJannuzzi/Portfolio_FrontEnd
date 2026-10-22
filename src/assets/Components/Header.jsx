@@ -42,15 +42,15 @@ export default function Header() {
               key={link.to}
               to={link.to}
               className={`relative flex items-center font-medium transition-all duration-300 ease-in-out cursor-pointer ${location.pathname === link.to
-                ? "text-purple text-[18px] scale-110"
-                : "text-white text-[14px] hover:text-purple hover:-translate-y-1 hover:scale-110"
+                ? "text-light-blue text-[18px] scale-110"
+                : "text-white text-[14px] hover:text-light-blue hover:-translate-y-1 hover:scale-110"
                 }`}
             >
               {link.name}
               {location.pathname === link.to && (
                 <motion.span
                   layoutId="active-menu-indicator"
-                  className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-purple"
+                  className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-light-blue"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
@@ -66,7 +66,7 @@ export default function Header() {
         {/* TOGGLE MENU */}
         <button
           onClick={toggleMenu}
-          className="text-white hover:text-purple transition-transform duration-200 hover:scale-110 cursor-pointer"
+          className="text-white hover:text-light-blue transition-transform duration-200 hover:scale-110 cursor-pointer"
         >
           <motion.div
             initial={{ rotate: 0 }}
@@ -111,15 +111,15 @@ export default function Header() {
                       to={link.to}
                       onClick={() => setMenuOpen(false)}
                       className={`relative block text-lg font-medium text-center py-1 transition-all duration-300 ease-in-out cursor-pointer flex items-center justify-center ${location.pathname === link.to
-                        ? "text-purple text-[16px] scale-110"
-                        : "text-white hover:text-purple hover:-translate-y-1 hover:scale-110 text-[14px]"
+                        ? "text-light-blue text-[16px] scale-110"
+                        : "text-white hover:text-light-blue hover:-translate-y-1 hover:scale-110 text-[14px]"
                         }`}
                     >
                       {link.name}
                       {location.pathname === link.to && (
                         <motion.span
                           layoutId="active-menu-indicator"
-                          className="absolute -bottom-px left-0 right-0 h-[2px] rounded-full bg-purple"
+                          className="absolute -bottom-px left-0 right-0 h-[2px] rounded-full bg-light-blue"
                           transition={{ type: "spring", stiffness: 500, damping: 30 }}
                         />
                       )}

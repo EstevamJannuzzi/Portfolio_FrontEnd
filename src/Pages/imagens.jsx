@@ -67,7 +67,7 @@ function ImagensPage() {
                     >
                         <button
                             onClick={prevImage}
-                            className="absolute left-6 z-10 text-white hover:text-purple px-1 py-1 bg-black/40 rounded-full hover:bg-black/60 cursor-pointer"
+                            className="absolute left-6 z-10 text-white hover:text-light-blue px-1 py-1 bg-black/40 rounded-full hover:bg-black/60 cursor-pointer"
                         >
                             <MdNavigateBefore size={50} />
                         </button>
@@ -101,7 +101,7 @@ function ImagensPage() {
 
                         <button
                             onClick={nextImage}
-                            className="absolute right-6 z-10 text-white hover:text-purple px-1 py-1 bg-black/40 rounded-full hover:bg-black/60 cursor-pointer"
+                            className="absolute right-6 z-10 text-white hover:text-light-blue px-1 py-1 bg-black/40 rounded-full hover:bg-black/60 cursor-pointer"
                         >
                             <MdNavigateNext size={50} />
                         </button>
@@ -111,7 +111,7 @@ function ImagensPage() {
                                 event.stopPropagation()
                                 setSelectedIndex(null)
                             }}
-                            className="absolute top-6 right-6 text-white text-3xl font-bold hover:text-purple cursor-pointer"
+                            className="absolute top-6 right-6 text-white text-3xl font-bold hover:text-light-blue cursor-pointer"
                         >
                             ✕
                         </button>

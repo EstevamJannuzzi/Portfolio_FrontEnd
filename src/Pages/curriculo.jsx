@@ -33,7 +33,7 @@ const Curriculo = () => {
             src="./pics/User.webp"
             alt="Estevam Jannuzzi"
             width='w-20 sm:w-28 lg:w-26 xl:w-40'
-            special='rounded-full outline-2 outline-offset-6 outline-solid outline-purple'
+            special='rounded-full outline-2 outline-offset-6 outline-solid outline-light-blue'
           />
 
          <Button

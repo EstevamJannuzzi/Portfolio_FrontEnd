@@ -9,7 +9,7 @@ const Accordion = ({
 }) => {
   return (
     <div
-      className={`rounded-lg py-8 px-6 mb-4 w-90 sm:w-164 lg:w-180 xl:w-190 border-l-12 border-purple bg-primary/35`}
+      className={`rounded-lg py-8 px-6 mb-4 w-90 sm:w-164 lg:w-180 xl:w-190 border-l-12 border-light-blue bg-primary/35`}
     >
       <button
         type="button"
@@ -24,7 +24,7 @@ const Accordion = ({
         </h2>
 
         <span
-          className="ml-4 shrink-0 flex items-center justify-center w-7 h-7 rounded-full border-2 border-purple text-light-gray transition-all duration-300"
+          className="ml-4 shrink-0 flex items-center justify-center w-7 h-7 rounded-full border-2 border-light-blue text-light-gray transition-all duration-300"
           aria-hidden="true"
         >
           <span className="relative w-3 h-3">
@@ -41,7 +41,7 @@ const Accordion = ({
         </span>
       </button>
 
-      <hr className="w-1/2 border-t-2 my-4 border-purple" />
+      <hr className="w-1/2 border-t-2 my-4 border-light-blue" />
 
       <div
         className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${

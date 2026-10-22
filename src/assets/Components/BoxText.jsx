@@ -11,7 +11,7 @@ const BoxText = ({ text, width, distance, margin, size, position = 'left' }) => 
       <div
         className={`font-text ${size} text-light-gray
         bg-primary/35 rounded-lg p-4 ${width} ${distance} ${margin} 
-        ${borderSide} border-purple`}
+        ${borderSide} border-light-blue`}
       >
         {text}
       </div>

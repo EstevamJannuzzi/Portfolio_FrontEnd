@@ -9,10 +9,10 @@ const Footer = () => {
         {new Date().getFullYear()} Feito por Estevam Jannuzzi&copy;. Todos os direitos reservados.
       </span>
       <div className='flex gap-4 mt-0 md:ml-auto'>
-        <a href='https://www.linkedin.com/in/estevam-jannuzzi-217355bb/' target='_blank' rel='noopener noreferrer' className='cursor-pointer bg-transparent border-none p-0 hover:text-purple'>
+        <a href='https://www.linkedin.com/in/estevam-jannuzzi-217355bb/' target='_blank' rel='noopener noreferrer' className='cursor-pointer bg-transparent border-none p-0 hover:text-light-blue'>
           <PiLinkedinLogo size={24} />
         </a>
-        <a href='https://www.instagram.com/estevam_jannuzzi/' target='_blank' rel='noopener noreferrer' className='cursor-pointer bg-transparent border-none p-0 hover:text-purple'>
+        <a href='https://www.instagram.com/estevam_jannuzzi/' target='_blank' rel='noopener noreferrer' className='cursor-pointer bg-transparent border-none p-0 hover:text-light-blue'>
           <FaInstagram size={24} />
         </a>
       </div>
