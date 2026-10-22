@@ -30,7 +30,7 @@ export default function Header() {
           <Pictures
             src={assetUrl('pics/logo.webp')}
             alt="Logo"
-            width="w-[40px] sm:w-[50px] lg:w-[76px]"
+            width="w-[36px] sm:w-[46px] lg:w-[72px]"
           />
         </Link>
       </div>
