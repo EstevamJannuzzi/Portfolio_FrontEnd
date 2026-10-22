@@ -9,10 +9,11 @@ import Programacao from '../Pages/programacao.jsx'
 import Curriculo from '../Pages/curriculo.jsx'
 import Contatos from '../Pages/contatos.jsx'
 import NotFound from '../Pages/notfound.jsx'
+import { BASE_URL } from '../utils/paths.js'
 
 const AppRoutes = () => {
   return (
-    <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
+    <Router basename={BASE_URL.replace(/\/$/, '') || '/'}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/videos" element={<Videos />} />

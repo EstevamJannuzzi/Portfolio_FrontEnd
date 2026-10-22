@@ -4,13 +4,14 @@ import Title from '../assets/Components/Title.jsx'
 import Pictures from '../assets/Components/Pictures.jsx'
 import Button from '../assets/Components/Button.jsx'
 import Accordion from '../assets/Components/Accordion.jsx'
+import { assetUrl } from '../utils/paths.js'
 
 const Curriculo = () => {
   const [openAccordion, setOpenAccordion] = useState(null)
 
   const handleDownloadPresentation = () => {
     const link = document.createElement('a')
-    link.href = './ppt/Apresentacao_Portfolio_Estevam_V1.ppsx'
+    link.href = assetUrl('ppt/Apresentacao_Portfolio_Estevam_V1.ppsx')
     link.download = 'Apresentacao_Portfolio_Estevam_V1.ppsx'
     document.body.appendChild(link)
     link.click()
@@ -30,7 +31,7 @@ const Curriculo = () => {
 
           {/* Foto do Usuário */}
           <Pictures
-            src="./pics/User.webp"
+            src={assetUrl('pics/User.webp')}
             alt="Estevam Jannuzzi"
             width='w-20 sm:w-28 lg:w-26 xl:w-40'
             special='rounded-full outline-2 outline-offset-6 outline-solid outline-light-blue'
@@ -45,7 +46,7 @@ const Curriculo = () => {
 
         <div className="fixed top-24 sm:top-26 lg:top-38 xl:top-30 -right-6 sm:-right-8 lg:-right-14 xl:-right-18">
           <Pictures
-            src="./pics/frog_smart.webp"
+            src={assetUrl('pics/frog_smart.webp')}
             alt="Frog Smart"
             width='w-[130px] sm:w-[200px] lg:w-[240px] xl:w-[380px]'
             margin='m-0'

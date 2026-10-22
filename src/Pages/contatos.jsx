@@ -4,6 +4,7 @@ import Title from '../assets/Components/Title.jsx'
 import Button from '../assets/Components/Button.jsx'
 import Pictures from '../assets/Components/Pictures.jsx'
 import { FaWhatsapp } from 'react-icons/fa'
+import { assetUrl } from '../utils/paths.js'
 
 const Contatos = () => {
   const contacts = [
@@ -32,7 +33,7 @@ const Contatos = () => {
       {/* Imagem Superior */}
       <div className="flex justify-center items-center mt-10 mb-2">
         <Pictures
-          src="./pics/ContatosDing.webp"
+          src={assetUrl('pics/ContatosDing.webp')}
           alt="Contatos Ding"
           width="w-[200px] sm:w-[180px] lg:w-[260px] xl:w-[280px]"
         />
