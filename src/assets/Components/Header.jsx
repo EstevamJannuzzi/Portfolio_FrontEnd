@@ -25,12 +25,12 @@ export default function Header() {
     <header className="w-full flex items-center justify-between bg-primary sm:h-[60px] lg:h-[90px] gap-4 py-3 px-6 fixed top-0 left-0 z-50 shadow-sm">
 
       {/* LOGO */}
-      <div className="flex items-center gap-x-4 xl:gap-x-6 ml-0 sm:ml-90 lg:ml-6 xl:ml-0">
+      <div className="flex items-center gap-x-4 xl:gap-x-6 ml-0 sm:ml-90 lg:ml-6">
         <Link to="/" className="transition-transform hover:scale-110 cursor-pointer">
           <Pictures
-            src={assetUrl('pics/logofre.webp')}
+            src={assetUrl('pics/logo.webp')}
             alt="Logo"
-            width="w-[44px] sm:w-[60px] lg:w-[90px] xl:w-[90px]"
+            width="w-[40px] sm:w-[46px]"
           />
         </Link>
       </div>
