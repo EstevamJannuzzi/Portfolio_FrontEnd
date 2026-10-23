@@ -11,8 +11,8 @@ const Curriculo = () => {
 
   const handleDownloadPresentation = () => {
     const link = document.createElement('a')
-    link.href = assetUrl('ppt/Apresentacao_Portfolio_Estevam_V1.ppsx')
-    link.download = 'Apresentacao_Portfolio_Estevam_V1.ppsx'
+    link.href = assetUrl('ppt/Apresentacao_Portfolio_Estevam_V2.ppsx')
+    link.download = 'Apresentacao_Portfolio_Estevam_V2.ppsx'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
