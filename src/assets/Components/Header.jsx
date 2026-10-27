@@ -12,11 +12,9 @@ export default function Header() {
   const location = useLocation();
   const links = [
     { name: "Home", to: "/" },
-    { name: "Vídeos", to: "/videos" },
-    { name: "Imagens", to: "/imagens" },
-    { name: "Websites", to: "/websites" },
-    { name: "Canais", to: "/canais" },
     { name: "Programação", to: "/programacao" },
+    { name: "Web/Canais", to: "/webcanais" },
+    { name: "Vid/Imagens", to: "/vidimagens" },
     { name: "Currículo", to: "/curriculo" },
     { name: "Contatos", to: "/contatos" },
   ];

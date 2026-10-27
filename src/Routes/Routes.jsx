@@ -1,10 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../Pages/home.jsx'
-import Videos from '../Pages/videos.jsx'
-import Imagens from '../Pages/imagens.jsx'
-import Websites from '../Pages/websites.jsx'
-import Canais from '../Pages/canais.jsx'
+import VidImagens from '../Pages/vid_imagens.jsx'
+import WebCanais from '../Pages/web_canais.jsx'
 import Programacao from '../Pages/programacao.jsx'
 import Curriculo from '../Pages/curriculo.jsx'
 import Contatos from '../Pages/contatos.jsx'
@@ -16,10 +14,8 @@ const AppRoutes = () => {
     <Router basename={BASE_URL.replace(/\/$/, '') || '/'}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/imagens" element={<Imagens />} />
-        <Route path="/websites" element={<Websites />} />
-        <Route path="/canais" element={<Canais />} />
+        <Route path="/vidimagens" element={<VidImagens />} />
+        <Route path="/webcanais" element={<WebCanais />} />
         <Route path="/programacao" element={<Programacao />} />
         <Route path="/curriculo" element={<Curriculo />} />
         <Route path="/contatos" element={<Contatos />} />

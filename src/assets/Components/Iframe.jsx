@@ -1,6 +1,6 @@
 const Iframe = ({
   src,
-  wrapperClass = 'relative flex justify-center items-center w-full max-w-[380px] sm:max-w-[360px] lg:max-w-[420px] xl:max-w-[580px]',
+  wrapperClass = 'relative flex justify-center items-center w-[220px] sm:w-[200px] lg:w-[240px] xl:w-[340px]',
   className = 'rounded-xl z-10',
 }) => {
   return (
