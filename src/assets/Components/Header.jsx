@@ -40,7 +40,7 @@ export default function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className={`relative flex h-full items-center font-medium transition-all duration-300 ease-in-out cursor-pointer ${location.pathname === link.to
+              className={`relative flex h-full items-center xl:items-end xl:pb-3 font-medium transition-all duration-300 ease-in-out cursor-pointer ${location.pathname === link.to
                 ? "text-light-blue text-[18px] scale-110"
                 : "text-white text-[14px] hover:text-light-blue hover:-translate-y-1 hover:scale-110"
                 }`}
@@ -115,13 +115,6 @@ export default function Header() {
                         }`}
                     >
                       {link.name}
-                      {location.pathname === link.to && (
-                        <motion.span
-                          layoutId="active-menu-indicator"
-                          className="absolute -bottom-px left-0 right-0 h-[2px] rounded-full bg-light-blue"
-                          transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                        />
-                      )}
                     </Link>
                   </motion.li>
                 ))}
