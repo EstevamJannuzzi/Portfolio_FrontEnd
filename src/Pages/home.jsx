@@ -13,7 +13,7 @@ const Home = () => {
                 <div className='flex flex-col items-center justify-center gap-2'>
                     <Title
                         text="Bem-vindo ao Portfólio de"
-                        size="text-[20px] sm:text-[32px] lg:text-[36px] xl:text-[50px]"
+                        size="text-[14px] sm:text-[20px] lg:text-[24px] xl:text-[32px]"
                     />
                     <Title
                         text="Estevam Jannuzzi"
