@@ -102,6 +102,7 @@ const Home = () => {
         <DefaultScreen className='z-30'>
 
             <div className="w-full overflow-x-clip">
+                {/* Home */}
                 <div className='flex flex-col items-center justify-center gap-2'>
                     <Title
                         text="Bem-vindo ao Portfólio de"
@@ -114,8 +115,6 @@ const Home = () => {
                     />
                 </div>
 
-
-                {/* BLOCO 1 */}
                 <div className="relative mx-auto mt-20 mb-8 flex w-full flex-col items-center justify-center gap-6 px-4 lg:ml-26 lg:px-0 lg:flex-row lg:gap-10 xl:ml-14">
                     <BoxText
                         text={
@@ -139,7 +138,6 @@ const Home = () => {
                     />
                 </div>
 
-                {/* BLOCO 2 */}
                 <div className='mx-auto mt-28 mb-12 flex w-full flex-col items-center justify-center gap-6 px-4 lg:mt-22 lg:px-0 lg:flex-row lg:gap-10'>
                     <Pictures
                         src={assetUrl('pics/carnivor.webp')}
@@ -172,7 +170,6 @@ const Home = () => {
                     />
                 </div>
 
-                {/* BLOCO 3 */}
                 <div className="relative mx-auto mt-8 mb-8 flex w-full flex-col items-center justify-center gap-6 px-4 sm:mt-16 lg:ml-26 lg:px-0 lg:flex-row lg:gap-10 xl:ml-18">
                     <BoxText
                         text={
@@ -199,7 +196,6 @@ const Home = () => {
                     />
                 </div>
 
-                {/* BLOCO 4 */}
                 <div className='mx-auto mt-30 mb-4 flex w-full flex-col items-center justify-center gap-6 px-4 sm:mt-8 lg:px-0 lg:flex-row lg:gap-10'>
                     <Pictures
                         src={assetUrl('pics/joystick.webp')}
@@ -225,6 +221,8 @@ const Home = () => {
                         size="text-[12px] sm:text-[18px]"
                     />
                 </div>
+                
+                {/* Programação */}
                 <section id="programming" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
                         <Title
@@ -259,6 +257,7 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Websites e canais */}
                 <section id="webcanais" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-8">
                         <div>
@@ -331,6 +330,7 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Vídeos e imagens */}
                 <section id="vidimagens" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-8">
                         <div>
@@ -453,6 +453,7 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Currículo */}
                 <section id="curriculo" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
                         <Title
@@ -593,6 +594,7 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Contatos */}
                 <section id="contatos" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
                         <Title
