@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import DefaultScreen from '../assets/Components/DefaultScreen.jsx'
 import Title from '../assets/Components/Title.jsx'
+import Pagination from '../assets/Components/Pagination.jsx'
 import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import images from '../assets/Data/imagens.js'
 
 function ImagensPage() {
     const [selectedIndex, setSelectedIndex] = useState(null)
+    const [currentPage, setCurrentPage] = useState(1)
     const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 })
     const [isZoomed, setIsZoomed] = useState(false)
+    const imagesPerPage = 6
+    const totalPages = Math.ceil(images.length / imagesPerPage)
+    const currentImages = images.slice(
+        (currentPage - 1) * imagesPerPage,
+        currentPage * imagesPerPage
+    )
 
     useEffect(() => {
         document.body.style.overflow = selectedIndex !== null ? 'hidden' : 'auto'
@@ -43,22 +51,32 @@ function ImagensPage() {
                 </div>
 
                 <div className="relative flex justify-center items-center mt-8 mb-10">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        {images.map((src, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setSelectedIndex(index)}
-                                className="transition-transform hover:scale-105 cursor-pointer"
-                            >
-                                <img
-                                    src={src}
-                                    alt="Imagem"
-                                    className="rounded-[12px] w-[320px] sm:w-[640px] lg:w-[750px] xl:w-[390px]"
-                                />
-                            </button>
-                        ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-6">
+                        {currentImages.map((src, index) => {
+                            const imageIndex = (currentPage - 1) * imagesPerPage + index
+
+                            return (
+                                <button
+                                    key={imageIndex}
+                                    onClick={() => setSelectedIndex(imageIndex)}
+                                    className="transition-transform hover:scale-105 cursor-pointer"
+                                >
+                                    <img
+                                        src={src}
+                                        alt="Imagem"
+                                        className="rounded-[12px] w-[220px] sm:w-[200px] lg:w-[240px] xl:w-[340px]"
+                                    />
+                                </button>
+                            )
+                        })}
                     </div>
                 </div>
+
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
+                />
 
                 {selectedIndex !== null && (
                     <div
