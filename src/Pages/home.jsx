@@ -221,7 +221,7 @@ const Home = () => {
                         size="text-[12px] sm:text-[18px]"
                     />
                 </div>
-                
+
                 {/* Programação */}
                 <section id="programming" className="scroll-mt-24 py-12">
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
@@ -353,7 +353,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div>
+                        <div className="rounded-[30px] border-1 border-light-blue bg-dark-gray/90 px-6 py-2">
                             <div
                                 id="images"
                                 className="flex flex-col items-center justify-center gap-2 text-center"

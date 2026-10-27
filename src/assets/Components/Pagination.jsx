@@ -23,7 +23,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
                 aria-label="Página anterior"
-                className="flex min-w-10 items-center justify-center rounded-lg bg-primary/35 px-2 py-2 text-light-gray transition-colors hover:bg-light-blue disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex min-w-10 items-center justify-center rounded-lg bg-primary/35 px-2 py-2 text-light-gray transition-colors hover:bg-light-blue disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
                 <MdChevronLeft size={24} />
             </button>
@@ -38,11 +38,10 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                         onClick={() => onPageChange(page)}
                         aria-label={`Ir para a página ${page}`}
                         aria-current={isCurrentPage ? 'page' : undefined}
-                        className={`min-w-10 rounded-lg px-3 py-2 font-text transition-colors cursor-pointer ${
-                            isCurrentPage
+                        className={`min-w-10 rounded-lg px-3 py-2 font-text transition-colors cursor-pointer ${isCurrentPage
                                 ? 'bg-light-blue text-white'
                                 : 'bg-primary/35 text-light-gray hover:bg-light-blue'
-                        }`}
+                            }`}
                     >
                         {page}
                     </button>
@@ -54,7 +53,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                 onClick={() => onPageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
                 aria-label="Próxima página"
-                className="flex min-w-10 items-center justify-center rounded-lg bg-primary/35 px-2 py-2 text-light-gray transition-colors hover:bg-light-blue disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex min-w-10 items-center justify-center rounded-lg bg-primary/35 px-2 py-2 text-light-gray transition-colors hover:bg-light-blue disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
                 <MdChevronRight size={24} />
             </button>
