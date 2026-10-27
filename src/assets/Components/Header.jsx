@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full flex items-center justify-between bg-primary sm:h-[60px] lg:h-[90px] gap-4 py-3 px-6 fixed top-0 left-0 z-50 shadow-sm">
+    <header className="w-full flex items-center justify-between bg-primary sm:h-[60px] lg:h-[90px] gap-4 py-3 px-6 xl:py-0 fixed top-0 left-0 z-50 shadow-sm">
 
       {/* LOGO */}
       <div className="flex items-center gap-x-4 xl:gap-x-6 ml-0 sm:ml-90 lg:ml-6">
@@ -34,13 +34,13 @@ export default function Header() {
       </div>
 
       {/* MENU DESKTOP */}
-      <div className="hidden xl:flex items-center space-x-6 relative">
-        <nav className="flex items-center space-x-6">
+      <div className="hidden xl:flex h-full items-center space-x-6 relative">
+        <nav className="flex h-full items-center space-x-6">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`relative flex items-center font-medium transition-all duration-300 ease-in-out cursor-pointer ${location.pathname === link.to
+              className={`relative flex h-full items-center font-medium transition-all duration-300 ease-in-out cursor-pointer ${location.pathname === link.to
                 ? "text-light-blue text-[18px] scale-110"
                 : "text-white text-[14px] hover:text-light-blue hover:-translate-y-1 hover:scale-110"
                 }`}
@@ -49,7 +49,7 @@ export default function Header() {
               {location.pathname === link.to && (
                 <motion.span
                   layoutId="active-menu-indicator"
-                  className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-light-blue"
+                  className="absolute bottom-1 left-0 right-0 h-[2px] rounded-full bg-light-blue"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
