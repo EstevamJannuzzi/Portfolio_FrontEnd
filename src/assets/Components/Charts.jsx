@@ -31,7 +31,7 @@ const Charts = ({ title = 'Gráfico de rosca', data = [], size = 108 }) => {
                 </h2>
                 <div
                     aria-hidden="true"
-                    className="h-1 w-20 rounded-full bg-linear-to-r from-purple via-light-blue to-green sm:w-28"
+                    className="h-1 w-60 sm:w-70 lg:w-78 xl:w-100 rounded-full bg-linear-to-r from-purple via-light-blue to-green"
                 />
             </header>
 

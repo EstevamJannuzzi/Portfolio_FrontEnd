@@ -574,25 +574,12 @@ const Home = () => {
                             />
 
                             <Accordion
-                                title="Cursos Complementares:"
-                                description={
-                                    <>
-                                        <p>Computação Gráfica: Autodesk Maya, Pixologic Zbrush, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe After Effects, Adobe Premiere, Adobe Media Encore, Adobe Substance 3D Painter, Luxion Keyshot, Figma.</p>
-                                        <p>Programação: Python, HTML5, CSS3, JavaScript (Intro), WordPress, ReactJS e Tailwind CSS.</p>
-                                        <p>Sistemas Operacionais: Windows 8.1, 10, 11, Linux Mint, Linux Ubuntu e Linux Fedora.</p>
-                                    </>
-                                }
-                                isOpen={openAccordion === 4}
-                                onToggle={() => setOpenAccordion(openAccordion === 4 ? null : 4)}
-                            />
-
-                            <Accordion
                                 title="Participações:"
                                 description={
                                     <p>Experiência em eventos e competições do setor: Big Festival, Campus Party, Game Jam (campeão em 2019) e mentor no Game Jam+.</p>
                                 }
-                                isOpen={openAccordion === 5}
-                                onToggle={() => setOpenAccordion(openAccordion === 5 ? null : 5)}
+                                isOpen={openAccordion === 4}
+                                onToggle={() => setOpenAccordion(openAccordion === 4 ? null : 4)}
                             />
                         </div>
                     </div>
