@@ -10,6 +10,7 @@ import Button from '../assets/Components/Button.jsx'
 import Iframe from '../assets/Components/Iframe.jsx'
 import Pagination from '../assets/Components/Pagination.jsx'
 import Accordion from '../assets/Components/Accordion.jsx'
+import Charts from '../assets/Components/Charts.jsx'
 import programacaos from '../assets/Data/programacaos.js'
 import websites from '../assets/Data/websites.js'
 import canais from '../assets/Data/canais.js'
@@ -594,6 +595,39 @@ const Home = () => {
                                 onToggle={() => setOpenAccordion(openAccordion === 5 ? null : 5)}
                             />
                         </div>
+                    </div>
+
+                    <div className="mt-10 flex justify-center px-4">
+                        <Charts
+                            title="Minhas Skills"
+                            size={96}
+                            data={[
+                                { category: 'Programação', label: 'Python', value: 45 },
+                                { category: 'Programação', label: 'HTML5', value: 75 },
+                                { category: 'Programação', label: 'CSS3', value: 75 },
+                                { category: 'Programação', label: 'JavaScript', value: 45 },
+                                { category: 'Programação', label: 'WordPress', value: 50 },
+                                { category: 'Programação', label: 'ReactJS', value: 65 },
+                                { category: 'Programação', label: 'Tailwind CSS', value: 75 },
+                                { category: 'Sistemas Operacionais', label: 'Windows 8.1', value: 70 },
+                                { category: 'Sistemas Operacionais', label: 'Windows 10', value: 85 },
+                                { category: 'Sistemas Operacionais', label: 'Windows 11', value: 85 },
+                                { category: 'Sistemas Operacionais', label: 'Linux Mint', value: 65 },
+                                { category: 'Sistemas Operacionais', label: 'Linux Ubuntu', value: 65 },
+                                { category: 'Sistemas Operacionais', label: 'Linux Fedora', value: 60 },
+                                { category: 'Computação Gráfica', label: 'Maya', value: 85 },
+                                { category: 'Computação Gráfica', label: 'ZBrush', value: 65 },
+                                { category: 'Computação Gráfica', label: 'Photoshop', value: 85 },
+                                { category: 'Computação Gráfica', label: 'Illustrator', value: 70 },
+                                { category: 'Computação Gráfica', label: 'InDesign', value: 60 },
+                                { category: 'Computação Gráfica', label: 'After Effects', value: 65 },
+                                { category: 'Computação Gráfica', label: 'Premiere', value: 85 },
+                                { category: 'Computação Gráfica', label: 'Media Encore', value: 90 },
+                                { category: 'Computação Gráfica', label: 'Substance 3D Painter', value: 75 },
+                                { category: 'Computação Gráfica', label: 'KeyShot', value: 65 },
+                                { category: 'Computação Gráfica', label: 'Figma', value: 60 },
+                            ]}
+                        />
                     </div>
                 </section>
 
