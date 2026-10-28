@@ -6,7 +6,12 @@
   --color-white: #FFFFFF; /* White */
   --color-light-blue: #5B6DD2; /* Light Blue */
   --color-light-gray: #F0F3F4; /* Light Gray */
+  --color-gray: #B0B4BE; /* Gray */
   --color-dark-gray: #262A2C; /* Dark Gray */
+  --color-purple: #6A0DAD; /* Purple */
+  --color-dark-red: #8B0000; /* Dark Red */
+  --color-green: #008000; /* Green */
+  --color-yellow: #FFD700; /* Yellow */
 
   --font-family: "Bungee", sans-serif;
   --font-text: "Quicksand", sans-serif;

@@ -258,7 +258,10 @@ const Home = () => {
                 </section>
 
                 {/* Websites e canais */}
-                <section id="webcanais" className="scroll-mt-24 py-12">
+                <section
+                    id="webcanais"
+                    className="relative isolate scroll-mt-24 py-24 before:absolute before:inset-y-0 before:left-1/2 before:w-screen before:-translate-x-1/2 before:-z-10 before:[clip-path:polygon(0_14%,100%_0,100%_86%,0_100%)] before:bg-[linear-gradient(35deg,var(--color-purple)_0%,var(--color-secondary)_65%)] before:content-['']"
+                >
                     <div className="flex flex-col items-center justify-center gap-8">
                         <div>
                             <div
@@ -595,7 +598,7 @@ const Home = () => {
                 </section>
 
                 {/* Contatos */}
-                <section id="contatos" className="scroll-mt-24 py-12">
+                <section id="contatos" className="relative isolate scroll-mt-24 py-24 before:absolute before:inset-y-0 before:left-1/2 before:w-screen before:-translate-x-1/2 before:-z-10 before:[clip-path:polygon(0_14%,100%_0,100%_86%,0_100%)] before:bg-[linear-gradient(35deg,var(--color-dark-red)_0%,var(--color-secondary)_65%)] before:content-['']">
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
                         <Title
                             text="Contato"
