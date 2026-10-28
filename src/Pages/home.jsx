@@ -55,7 +55,6 @@ const Home = () => {
     }, [selectedIndex])
 
     useEffect(() => {
-        setIsZoomed(false)
         setZoomPosition({ x: 50, y: 50 })
     }, [selectedIndex])
 
@@ -409,12 +408,12 @@ const Home = () => {
                                     </button>
 
                                     <div
-                                        className="relative max-h-[90vh] max-w-[90vw] cursor-zoom-in overflow-hidden rounded-2xl shadow-2xl"
-                                        onClick={(event) => event.stopPropagation()}
-                                        onMouseEnter={() => setIsZoomed(true)}
-                                        onMouseLeave={() => {
-                                            setIsZoomed(false)
-                                            setZoomPosition({ x: 50, y: 50 })
+                                        className={`relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl shadow-2xl ${
+                                            isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'
+                                        }`}
+                                        onClick={(event) => {
+                                            event.stopPropagation()
+                                            setIsZoomed((zoomed) => !zoomed)
                                         }}
                                         onMouseMove={(event) => {
                                             const bounds = event.currentTarget.getBoundingClientRect()
