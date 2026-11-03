@@ -369,7 +369,7 @@ const Home = () => {
                         <div className="rounded-[30px] border-1 border-light-blue bg-linear-to-br from-purple/24 to-dark-red/24 px-6 py-2">
                             <div
                                 id="images"
-                                className="flex flex-col items-center justify-center gap-2 text-center"
+                                className="flex flex-col items-center justify-center gap-2 text-center mt-6"
                             >
                                 <Title
                                     text="Imagens"
