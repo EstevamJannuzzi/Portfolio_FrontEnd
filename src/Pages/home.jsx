@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import DefaultScreen from '../assets/Components/DefaultScreen.jsx'
@@ -22,6 +23,8 @@ const Home = () => {
     const location = useLocation()
     const [selectedIndex, setSelectedIndex] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
+    const [pageDirection, setPageDirection] = useState(1)
+    const [imageDirection, setImageDirection] = useState(1)
     const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 })
     const [isZoomed, setIsZoomed] = useState(false)
     const [openAccordion, setOpenAccordion] = useState(null)
@@ -60,12 +63,19 @@ const Home = () => {
 
     const nextImage = (event) => {
         event.stopPropagation()
+        setImageDirection(1)
         setSelectedIndex((previous) => (previous + 1) % images.length)
     }
 
     const prevImage = (event) => {
         event.stopPropagation()
+        setImageDirection(-1)
         setSelectedIndex((previous) => (previous - 1 + images.length) % images.length)
+    }
+
+    const changePage = (page) => {
+        setPageDirection(page > currentPage ? 1 : -1)
+        setCurrentPage(page)
     }
 
     const handleDownload = (link) => {
@@ -367,32 +377,53 @@ const Home = () => {
                                 />
                             </div>
 
-                            <div className="relative mt-8 mb-10 flex items-center justify-center">
-                                <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-6">
-                                    {currentImages.map((src, index) => {
-                                        const imageIndex = (currentPage - 1) * imagesPerPage + index
+                            <div className="relative mt-8 mb-10 grid w-full items-center justify-items-center overflow-hidden">
+                                <AnimatePresence initial={false} custom={pageDirection}>
+                                    <motion.div
+                                        key={currentPage}
+                                        custom={pageDirection}
+                                        variants={{
+                                            enter: (direction) => ({
+                                                x: direction * 80,
+                                                opacity: 0,
+                                            }),
+                                            center: { x: 0, opacity: 1 },
+                                            exit: (direction) => ({
+                                                x: direction * -80,
+                                                opacity: 0,
+                                            }),
+                                        }}
+                                        initial="enter"
+                                        animate="center"
+                                        exit="exit"
+                                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                        className="col-start-1 row-start-1 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-6"
+                                    >
+                                        {currentImages.map((src, index) => {
+                                            const imageIndex = (currentPage - 1) * imagesPerPage + index
 
-                                        return (
-                                            <button
-                                                key={imageIndex}
-                                                onClick={() => setSelectedIndex(imageIndex)}
-                                                className="cursor-pointer transition-transform hover:scale-105"
-                                            >
-                                                <img
-                                                    src={src}
-                                                    alt="Imagem"
-                                                    className="w-[220px] rounded-[12px] sm:w-[200px] lg:w-[240px] xl:w-[340px]"
-                                                />
-                                            </button>
-                                        )
-                                    })}
-                                </div>
+                                            return (
+                                                <button
+                                                    key={imageIndex}
+                                                    onClick={() => setSelectedIndex(imageIndex)}
+                                                    className="cursor-pointer transition-transform hover:scale-105"
+                                                >
+                                                    <img
+                                                        src={src}
+                                                        alt="Imagem"
+                                                        className="w-[220px] rounded-[12px] sm:w-[200px] lg:w-[240px] xl:w-[340px]"
+                                                    />
+                                                </button>
+                                            )
+                                        })}
+                                    </motion.div>
+                                </AnimatePresence>
                             </div>
 
                             <Pagination
                                 currentPage={currentPage}
                                 totalPages={totalPages}
-                                onPageChange={setCurrentPage}
+                                onPageChange={changePage}
                             />
 
                             {selectedIndex !== null && (
@@ -408,7 +439,7 @@ const Home = () => {
                                     </button>
 
                                     <div
-                                        className={`relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl shadow-2xl ${
+                                        className={`relative grid max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl shadow-2xl ${
                                             isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'
                                         }`}
                                         onClick={(event) => {
@@ -423,15 +454,38 @@ const Home = () => {
                                             })
                                         }}
                                     >
-                                        <img
-                                            src={images[selectedIndex]}
-                                            alt="Imagem ampliada"
-                                            className="block max-h-[90vh] max-w-[90vw] object-contain transition-transform duration-150"
-                                            style={{
-                                                transform: isZoomed ? 'scale(2)' : 'scale(1)',
-                                                transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
-                                            }}
-                                        />
+                                        <AnimatePresence initial={false} custom={imageDirection}>
+                                            <motion.div
+                                                key={selectedIndex}
+                                                custom={imageDirection}
+                                                variants={{
+                                                    enter: (direction) => ({
+                                                        x: direction * 80,
+                                                        opacity: 0,
+                                                    }),
+                                                    center: { x: 0, opacity: 1 },
+                                                    exit: (direction) => ({
+                                                        x: direction * -80,
+                                                        opacity: 0,
+                                                    }),
+                                                }}
+                                                initial="enter"
+                                                animate="center"
+                                                exit="exit"
+                                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                className="col-start-1 row-start-1"
+                                            >
+                                                <img
+                                                    src={images[selectedIndex]}
+                                                    alt="Imagem ampliada"
+                                                    className="block max-h-[90vh] max-w-[90vw] object-contain transition-transform duration-150"
+                                                    style={{
+                                                        transform: isZoomed ? 'scale(2)' : 'scale(1)',
+                                                        transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
+                                                    }}
+                                                />
+                                            </motion.div>
+                                        </AnimatePresence>
                                     </div>
 
                                     <button
