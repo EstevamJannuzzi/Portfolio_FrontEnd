@@ -1,14 +1,37 @@
-import React, { useState } from 'react'
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import Pictures from '../../assets/Components/Pictures.jsx'
 import Title from '../../assets/Components/Title.jsx'
 import Button from '../../assets/Components/Button.jsx'
 import Accordion from '../../assets/Components/Accordion.jsx'
-import Charts from '../../assets/Components/Charts.jsx'
 import curriculoSkills from '../../assets/Data/curriculoSkills.js'
 import { assetUrl } from '../../utils/paths.js'
 
+const Charts = lazy(() => import('../../assets/Components/Charts.jsx'))
+
 const Curriculo = () => {
     const [openAccordion, setOpenAccordion] = useState(null)
+    const [shouldLoadCharts, setShouldLoadCharts] = useState(false)
+    const chartsContainerRef = useRef(null)
+
+    useEffect(() => {
+        const chartsContainer = chartsContainerRef.current
+        if (!chartsContainer) return
+
+        if (!('IntersectionObserver' in window)) {
+            setShouldLoadCharts(true)
+            return
+        }
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setShouldLoadCharts(true)
+                observer.disconnect()
+            }
+        })
+
+        observer.observe(chartsContainer)
+        return () => observer.disconnect()
+    }, [])
 
     const handleDownloadPresentation = () => {
         const anchor = document.createElement('a')
@@ -146,12 +169,16 @@ const Curriculo = () => {
                 </div>
             </div>
 
-            <div className="mt-10 flex justify-center px-4">
-                <Charts
-                    title="Minhas Skills"
-                    size={96}
-                    data={curriculoSkills}
-                />
+            <div ref={chartsContainerRef} className="mt-10 flex min-h-40 justify-center px-4">
+                {shouldLoadCharts && (
+                    <Suspense fallback={<div className="min-h-40" aria-hidden="true" />}>
+                        <Charts
+                            title="Minhas Skills"
+                            size={96}
+                            data={curriculoSkills}
+                        />
+                    </Suspense>
+                )}
             </div>
         </section>
     )
